@@ -23,8 +23,9 @@ pod "AiInterviewSDK"
 
 ### 2. 手动集成
 
-1. 下载SDK，将 `AiInterView.framework` 、 `Frameworks` 文件夹里面的framework、`AiInterviewResourceBundle.bundle` 进入工程。
-2. 引入以下系统库
+1. SDK 的下载地址:  https://github.com/hanyunwangxue/ai_interview_ios。
+2. 将 `AiInterView.framework` 、 `Frameworks` 文件夹里面的framework、`AiInterviewResourceBundle.bundle` 进入工程。
+3. 引入以下系统库
     - AudioToolbox.framework
     - AVFoundation
     - AudioToolbox
