@@ -55,3 +55,4 @@ navigationController?.pushViewController(controller, animated: true)
 
 1. SDK最低支持的iOS版本是 **`11.0`**
 2. SDK 采用 `Swift 5.0` 开发
+3. 支持设备运行（不支持模拟器）
