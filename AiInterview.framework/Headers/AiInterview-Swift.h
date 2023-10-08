@@ -230,6 +230,7 @@ using UInt = size_t;
 #if __has_warning("-Watimport-in-framework-header")
 #pragma clang diagnostic ignored "-Watimport-in-framework-header"
 #endif
+@import ObjectiveC;
 @import QuartzCore;
 @import UIKit;
 #endif
@@ -265,7 +266,6 @@ SWIFT_CLASS("_TtC11AiInterview21AiInterViewController")
 @end
 
 
-
 @class CAAnimation;
 
 @interface AiInterViewController (SWIFT_EXTENSION(AiInterview)) <CAAnimationDelegate>
@@ -275,6 +275,13 @@ SWIFT_CLASS("_TtC11AiInterview21AiInterViewController")
 
 
 
+
+
+
+SWIFT_CLASS("_TtC11AiInterview7AiLoger")
+@interface AiLoger : NSObject
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
 
 
 
