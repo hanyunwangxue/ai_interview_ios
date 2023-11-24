@@ -31,9 +31,25 @@ TODO: Add long description of the pod here.
 
   s.ios.deployment_target = '11.0'
   s.static_framework = true
-  s.vendored_frameworks = 'AiInterview.framework', 'Frameworks/*.framework'
+  
   s.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
-  s.resource =  "AiInterviewResourceBundle.bundle"
+  
+  s.subspec 'Interview' do |it|
+    it.resource =  "AiInterviewResourceBundle.bundle"
+    it.vendored_frameworks = 'AiInterview.framework'
+  end
+
+  s.subspec 'IJK' do |ijk|
+    ijk.vendored_frameworks = "Frameworks/IJKMediaFramework.framework"
+  end
+
+  s.subspec 'ASR' do |asr|
+    asr.vendored_frameworks = "Frameworks/QC*.framework"
+  end
+
+  s.subspec 'Log' do |lg|
+    lg.vendored_frameworks = "Frameworks/AliyunLogProducer.framework"
+  end
 
   s.frameworks  = "AudioToolbox", "AVFoundation", "CoreGraphics", "CoreMedia", "CoreVideo", "MobileCoreServices", "OpenGLES", "QuartzCore", "VideoToolbox", "Foundation", "UIKit", "MediaPlayer", "Accelerate", "SystemConfiguration"
   s.libraries   = "bz2", "z", "stdc++", "c++"
