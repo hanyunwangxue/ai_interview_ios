@@ -1,11 +1,4 @@
 framework module AiInterview {
-  umbrella header "AiInterview-umbrella.h"
-
-  export *
-  module * { export * }
-}
-
-module AiInterview.Swift {
   header "AiInterview-Swift.h"
   requires objc
 }
