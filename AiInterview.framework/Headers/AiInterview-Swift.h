@@ -277,7 +277,6 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #if __has_warning("-Watimport-in-framework-header")
 #pragma clang diagnostic ignored "-Watimport-in-framework-header"
 #endif
-@import Foundation;
 @import ObjectiveC;
 @import QuartzCore;
 @import UIKit;
@@ -313,18 +312,13 @@ SWIFT_CLASS("_TtC11AiInterview21AiInterViewController")
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil SWIFT_UNAVAILABLE;
 @end
 
-
-@interface AiInterViewController (SWIFT_EXTENSION(AiInterview))
-- (void)observeValueForKeyPath:(NSString * _Nullable)keyPath ofObject:(id _Nullable)object change:(NSDictionary<NSKeyValueChangeKey, id> * _Nullable)change context:(void * _Nullable)context;
-@end
-
-
-
 @class CAAnimation;
 
 @interface AiInterViewController (SWIFT_EXTENSION(AiInterview)) <CAAnimationDelegate>
 - (void)animationDidStop:(CAAnimation * _Nonnull)anim finished:(BOOL)flag;
 @end
+
+
 
 
 
