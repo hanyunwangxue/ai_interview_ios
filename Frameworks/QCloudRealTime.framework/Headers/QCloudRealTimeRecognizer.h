@@ -135,6 +135,14 @@ typedef NS_ENUM(NSInteger, QCloudASRRealTimeRecognizeState) {
  * @param volume 声音音量，取值范围（-40-0)
  */
 - (void)realTimeRecognizerDidUpdateVolume:(QCloudRealTimeRecognizer *)recognizer volume:(float)volume;
+/**
+ * 录音音量实时回调用
+ * @param recognizer 实时语音识别实例
+ * @param volume 声音音量，计算方式如下$A_{i}$为采集音频振幅值
+ * $$A_{mean} = \frac{1}{n} \sum_{i=1}^{n} A_{i}^{2}$$
+ * $$volume=\max (10*\log_{10}(A_{mean}), 0)$$
+ */
+- (void)realTimeRecognizerDidUpdateVolumeDB:(QCloudRealTimeRecognizer *)recognizer volume:(float)volume;
 
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

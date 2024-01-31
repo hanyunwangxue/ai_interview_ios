@@ -57,6 +57,7 @@ typedef NS_ENUM(NSInteger, QCloudASRNetworkProtocol) {
 //是否显示词级别时间戳。0：不显示；1：显示，不包含标点时间戳，2：显示，包含标点时间戳。默认为0。
 @property (nonatomic, assign) NSInteger reinforceHotword; //热词增强功能 0: 关闭, 1: 开启 默认0
 @property (nonatomic, assign) float noiseThreshold; // 噪音参数阈值，默认为0，取值范围：[-1,1]
+@property (nonatomic, assign) NSInteger maxSpeakTime; // 强制断句功能，取值范围 5000-90000(单位:毫秒），默认值0(不开启)。 在连续说话不间断情况下，该参数将实现强制断句（此时结果变成稳态，slice_type=2）。如：游戏解说场景，解说员持续不间断解说，无法断句的情况下，将此参数设置为10000，则将在每10秒收到 slice_type=2的回调。
 
 /*——————————————————————————————————————————————————————————————————————————————————*/
 
@@ -66,7 +67,7 @@ typedef NS_ENUM(NSInteger, QCloudASRNetworkProtocol) {
 
 //shouldSaveAsFile：仅限使用SDK内置录音器有效，是否保存录音文件到本地 默认关闭
 @property (nonatomic, assign) BOOL shouldSaveAsFile;
-//SaveFilePath：音频保存的路径，仅限使用SDK内置录音器有效，默认路径为[NSTemporaryDirectory() stringByAppendingPathComponent:@"recordaudio.wav"]
+//SaveFilePath：开启shouldSaveAsFile后音频保存的路径，仅限使用SDK内置录音器有效，默认路径为[NSTemporaryDirectory() stringByAppendingPathComponent:@"recordaudio.wav"]
 @property (nonatomic, copy) NSString *saveFilePath;
 
 
